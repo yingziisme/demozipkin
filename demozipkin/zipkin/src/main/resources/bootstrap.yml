@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: zipkin-server
+  profiles:
+    active: dev
+security:
+  basic:
+    enabled: true
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+server:
+  port: 8810

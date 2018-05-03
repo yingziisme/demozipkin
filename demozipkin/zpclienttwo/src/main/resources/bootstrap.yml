@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: zipkin-client-two
+  profiles:
+    active: dev
+  sleuth:
+    sampler:
+      percentage: 1.0
+security:
+  basic:
+    enabled: true
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+server:
+  port: 8812
